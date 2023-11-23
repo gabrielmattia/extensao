@@ -28,6 +28,13 @@ module.exports = {
       backgroundImage: {
         'back-arrow': 'url(\'../assets/images/left-arrow.svg\')',
       },
+      gridTemplateColumns: {
+        'custom-2': 'repeat(2, 280px)',
+        'custom-3': 'repeat(3, 280px)',
+        'custom-4': 'repeat(4, 280px)',
+        'custom-5': 'repeat(5, 280px)',
+        'custom--auto-fit': 'repeat(auto-fit, 280px)',
+      },
     },
   },
   plugins: [require('daisyui')],

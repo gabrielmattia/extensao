@@ -12,7 +12,7 @@ export const FILTER_TYPES = {
 }
 
 export const FILTER_TYPES_MAPPING = {
-  1: 'nomeOficial',
+  1: 'nome_oficial',
   2: 'autor',
   3: 'localidade',
   4: 'favorito',
