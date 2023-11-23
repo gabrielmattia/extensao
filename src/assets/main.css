@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-fill: #ffffff;
+  --color-text: #000000;
+
+  --color-black: #181818;
+  --color-white-soft: #fbf6f3;
+  /* --color-white-mute: #f2f2f2; */
+
+  --color-black-soft: #222222;
+  --color-black-mute: rgba(84, 84, 84, 0.65);
+
+  --bg-btn-secondary-hover: rgb(235, 235, 235);
+  --divider-primary: rgba(60, 60, 60, 0.29);
+  --divider-primary-light: rgba(60, 60, 60, 0.12);
+  --divider-secondary: rgba(84, 84, 84, 0.65);
+  --divider-secondary-light: rgba(84, 84, 84, 0.48);
+
+  /* 
+  TODO: remove
+  --vt-c-indigo: #2c3e50;
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--color-fill);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  */
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-text-base: var(--color-text);
+
+  --color-background-base: var(--color-fill);
+  --color-background-soft: var(--color-white-soft);
+  /* --color-background-mute: var(--color-white-mute); */
+  
+  --color-border: var(--divider-primary-light);
+  --color-border-hover: var(--divider-primary);
+  
+  --bg-btn-secondary: var(--color-fill);
+  --bd-color-btn-secondary-focus: var(--divider-secondary)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-base: var(--color-black);
+    --color-background-soft: var(--color-black-soft);
+    --color-background-mute: var(--color-black-mute);
+
+    --color-border: var(--divider-secondary-light);
+    --color-border-hover: var(--divider-secondary);
+    /* 
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text-base: var(--vt-c-text-dark-2);
+    */
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  @apply bg-skin-fill text-skin-base min-h-screen;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  @apply my-0 mx-auto font-normal min-h-screen;
+}
+
+main {
+  @apply min-h-[65vh];
+}
+
+h1 {
+  @apply text-[40px] font-semibold leading-[48px];
+}
+
+h2 {
+  @apply text-[30px] font-semibold leading-[34px];
+}
+
+h3 {
+  @apply text-[20px] font-semibold leading-[24px];
+}
+
+p {
+  @apply text-[16px] font-[400] leading-[24px];
+}
+
+a {
+  @apply text-[14px] font-[400] leading-[16px] md:hover:underline md:hover:opacity-[0.5];
+}
+
+button {
+  @apply text-[16px] font-bold leading-[20px];
+}
+
+label {
+  @apply text-[18px] font-extrabold leading-[22px];
+}
+
+span {
+  @apply text-[12px] font-semibold leading-[14px];
+}
