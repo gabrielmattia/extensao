@@ -32,7 +32,7 @@ onMounted(async () => {
           :key="index">
           <!-- <img :src="`../data/${imageFileName}/${image.file}`":alt="`${image.name}`"  class="rounded-lg" /> -->
           <!-- <img :src="`../data/${imageFileName}/${image.file}`" :alt="`${image.name}`" class="rounded-lg" /> -->
-          <img :src="`../src/assets/images/${image.file}`" :alt="imgAltText" class="rounded-lg" />
+          <img :src="`/../${image.file}`" :alt="`${image.name}`" class="rounded-lg" />
 
         </div>
       </div>

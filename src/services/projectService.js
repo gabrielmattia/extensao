@@ -1,15 +1,15 @@
 export const getProjects = async () => {
-  const response = await fetch('../src/data/database.json')
+  const response = await fetch('/database.json')
     .then((response) => response.json())
     .then((data) => {
-     
+      console.log(data)
       return data
     })
   return response
 }
 
 export const getProjectById = async (id) => {
-  const response = await fetch('../src/data/database.json')
+  const response = await fetch('/database.json')
   .then((response) => response.json())
   .then((data) => {
    
@@ -21,8 +21,8 @@ export const getProjectById = async (id) => {
 
 }
 
-export const getFavoritos = async (id) => {
-  const response = await fetch('../src/data/database.json')
+export const getFavoritos = async () => {
+  const response = await fetch('/database.json')
     .then((response) => response.json())
     .then((data) => {
       

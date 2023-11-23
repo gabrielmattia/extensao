@@ -32,7 +32,7 @@ export default {
         <li v-for="item in data" :key="item.id">
           <!-- {{ item.images }} -->
           <!-- <img v-if="item.images[0]?.file" :src="'../scr/data/' + item.images[0].file" alt="File" /> -->
-          <img v-if="item.images[0]?.file" :src="`src/assets/images/${item.images[0].file}`" alt="File" />
+          <img v-if="item.images[0]?.file" :src="`${item.images[0].file}`" alt="File" />
 
         </li>
       </ul>

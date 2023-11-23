@@ -31,6 +31,7 @@ const isLoading = ref(true)
 onBeforeMount(() => {
   imageSrc.value = import.meta.env.VITE_API_URL_STORAGE_DEV
   isLoading.value = false
+
 })
 
 
@@ -42,7 +43,7 @@ onBeforeMount(() => {
     <router-link to="#" @click="router.push(`/projects/${projectId}`)">
       <figure>
 
-        <img :src="`src/assets/images/${this.imageFileName}`" :alt="imgAltText" />
+        <img :src="`/../${imageFileName}`" :alt="imgAltText" />
 
 
       </figure>

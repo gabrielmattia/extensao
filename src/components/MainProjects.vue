@@ -10,8 +10,9 @@
  
 
     favoriteProjects.value = await getFavoritos()
-    
+      
   })
+ 
 </script>
 
 <template>
@@ -21,6 +22,7 @@
   >
     <CardProject
       v-for="fav in favoriteProjects"
+      
       :key="fav.id"
       :projectId="fav.id"
       :projectTitle="fav.nome_oficial"
