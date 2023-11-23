@@ -22,6 +22,7 @@ defineProps({
   imgAltText: {
     type: String,
   },
+
 })
 const router = useRouter()
 const imageSrc = ref('')
@@ -31,6 +32,8 @@ onBeforeMount(() => {
   imageSrc.value = import.meta.env.VITE_API_URL_STORAGE_DEV
   isLoading.value = false
 })
+
+
 </script>
 
 <template>
@@ -38,7 +41,10 @@ onBeforeMount(() => {
   <div v-else class="card glass">
     <router-link to="#" @click="router.push(`/projects/${projectId}`)">
       <figure>
-        <img :src="`http://localhost:8000/storage/${imageFileName}`" :alt="imgAltText" />
+
+        <img :src="`src/assets/images/${this.imageFileName}`" :alt="imgAltText" />
+
+
       </figure>
 
       <div class="card-body">

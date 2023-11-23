@@ -8,10 +8,15 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     outDir: './dist',
+    port: 3000,
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+
+  server: {
+    port: 3000, // Change the port as needed
   },
 })

@@ -1,20 +1,16 @@
 <script setup>
   import { onMounted, ref } from 'vue'
   import CardProject from '@/components/CardProject.vue'
-  import { getProjects } from '../services/projectService'
-  import { FILTER_TYPES } from '../constants/filters'
+  import { getFavoritos } from '../services/projectService'
+  
 
   const favoriteProjects = ref([])
 
   onMounted(async () => {
-    const filterParams = {
-      type: FILTER_TYPES['favorito'],
-      value: true,
-    }
-    const response = await getProjects(filterParams)
-    if (!response.length) return
+ 
 
-    favoriteProjects.value = response
+    favoriteProjects.value = await getFavoritos()
+    
   })
 </script>
 
